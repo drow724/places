@@ -24,7 +24,7 @@
                     <input type="text" id="keyword2" name="keyword2">
                     <input type="text" id="keyword3" name="keyword3">
                 </div>
-                <button type="submit">등록하기</button>
+                <button type="submit" onClick="click">등록하기</button>
             </form>
         </section>
         <section id="tracking">
@@ -35,7 +35,11 @@
     <footer>
         <p>ⓒ 2024 네이버 플레이스 순위 추적 시스템</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        function click() {
+            fetch("https://map.naver.com/p/api/search/allSearch?query=%EC%BB%A4%ED%94%BC&type=all&searchCoord=&boundary=");
+        } 
+    </script>
 </body>
 <style>
 body {

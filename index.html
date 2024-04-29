@@ -38,7 +38,13 @@
     <script>
         document.addEventListener("DOMContentLoaded", function(){
             document.getElementById("click").onclick = () => {
-                fetch("https://map.naver.com/p/api/search/allSearch?query=%EC%BB%A4%ED%94%BC&type=all&searchCoord=&boundary=");
+                fetch('https://map.naver.com/p/api/search/allSearch?query=%EC%BB%A4%ED%94%BC&type=all&searchCoord=&boundary=', {
+                  method: 'GET',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin:': '*'
+                  }
+                });
             } 
         });
     </script>

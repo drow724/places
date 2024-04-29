@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>네이버 플레이스 순위 추적 시스템</title>
-    <!-- CSS 파일 추가 -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +13,19 @@
     <main>
         <section id="registration">
             <h2>등록하기</h2>
-            <!-- 등록 폼 -->
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="businessName">업체명</label>
+                    <input type="text" id="businessName" name="businessName" required>
+                </div>
+                <div class="form-group">
+                    <label for="keywords">키워드 (최대 3개)</label>
+                    <input type="text" id="keyword1" name="keyword1" required>
+                    <input type="text" id="keyword2" name="keyword2">
+                    <input type="text" id="keyword3" name="keyword3">
+                </div>
+                <button type="submit">등록하기</button>
+            </form>
         </section>
         <section id="tracking">
             <h2>추적하기</h2>
@@ -24,7 +35,76 @@
     <footer>
         <p>ⓒ 2024 네이버 플레이스 순위 추적 시스템</p>
     </footer>
-    <!-- JavaScript 파일 추가 -->
     <script src="script.js"></script>
 </body>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+</style>
 </html>
